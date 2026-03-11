@@ -66,7 +66,7 @@ function App() {
     <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '100vh', width: '100%' }}>
       <Header
         title="TickIt"
-        logo={<img src="./public/logo.png" alt="logo" style={{ height: 70 }} />}
+        logo={<img src="logo.png" alt="logo" style={{ height: 70 }} />}
       />
       <Body>
         <Typography

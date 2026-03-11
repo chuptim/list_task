@@ -48,7 +48,7 @@ const TaskInput: React.FC<TaskInputProps> = ({ onSubmit }) => {
     if (task.trim()) {
       onSubmit?.(task, priority);
       setTask('');
-      setPriority('medium');
+      setPriority('normal');
     }
   };
 

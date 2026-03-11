@@ -7,13 +7,13 @@ interface TaskInputProps {
 
 const TaskInput: React.FC<TaskInputProps> = ({ onSubmit }) => {
   const [task, setTask] = useState('');
-  const [priority, setPriority] = useState('medium');
+  const [priority, setPriority] = useState('normal');
   const [bottomOffset, setBottomOffset] = useState<number>(16);
 
   React.useEffect(() => {
     let rafId: number | null = null;
 
-    const baseMargin = 16; // default distance from bottom
+    const baseMargin = 16;
 
     const update = () => {
       rafId = null;
@@ -21,7 +21,6 @@ const TaskInput: React.FC<TaskInputProps> = ({ onSubmit }) => {
       let offset = baseMargin;
       if (footer) {
         const rect = footer.getBoundingClientRect();
-        // overlap: how many pixels footer intrudes into viewport from bottom
         const overlap = Math.max(0, window.innerHeight - rect.top);
         offset = baseMargin + overlap;
       }
@@ -73,7 +72,7 @@ const TaskInput: React.FC<TaskInputProps> = ({ onSubmit }) => {
           className="priority-select"
         >
           <option value="low">Низкий</option>
-          <option value="medium">Средний</option>
+          <option value="normal">Средний</option>
           <option value="high">Высокий</option>
         </select>
         <button type="submit" className="submit-button">

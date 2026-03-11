@@ -1,15 +1,13 @@
-// components/Header.tsx
 import React from 'react';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 
-// Интерфейс для элемента навигации
 
 interface HeaderProps {
   title?: string;
-  logo?: React.ReactNode; // может быть иконка, изображение или любой элемент
+  logo?: React.ReactNode;
 }
 
 const Header: React.FC<HeaderProps> = ({
